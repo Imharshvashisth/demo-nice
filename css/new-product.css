@@ -1,0 +1,382 @@
+/* =====================================================
+Template Name   : Handox
+Description     : Handyman Services HTML5 Template
+Author          : Themesland
+Version         : 1.2
+=======================================================*/
+
+/* ===================
+fonts
+====================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Titillium+Web:wght@400;600;700;900&display=swap');
+/* ===================
+general css
+====================== */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    scroll-behavior: inherit !important;
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    color: #222;
+    line-height: 1.8;
+}
+
+a {
+    color: #222;
+    display: inline-block;
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+    outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #04a4a4;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #222222;
+    margin: 0px;
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    margin: 0px;
+}
+
+
+
+/* =========================================
+           NICE PLY - UNIQUE NAMESPACE VARIABLES
+           ========================================= */
+:root {
+    --np-ply-primary: #00a69c;
+    /* Nice Ply Teal Color */
+    --np-ply-primary-hover: #008a82;
+    --np-ply-text-dark: #212529;
+    --np-ply-text-gray: #555555;
+    --np-ply-bg-light: #f9fbfb;
+    --np-ply-border: #e0e0e0;
+    --np-ply-font: 'Poppins', sans-serif;
+    --np-ply-transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: var(--np-ply-font);
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* =========================================
+           MAIN CONTAINER & LIST WRAPPER
+           ========================================= */
+.np-ply-section {
+    padding: 80px 20px;
+    background-color: var(--np-ply-bg-light);
+    display: flex;
+    justify-content: center;
+}
+
+.np-ply-container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+}
+
+.np-ply-products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* Ek ke niche ek gap */
+    width: 100%;
+}
+
+/* =========================================
+           INDIVIDUAL PRODUCT CARD (EK KE NICHE EK)
+           ========================================= */
+.np-ply-product-card {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.np-ply-image-col {
+    flex: 0 0 45%;
+    position: relative;
+    min-height: 400px;
+}
+
+.np-ply-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Side overlay design to match the reference look */
+.np-ply-image-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    background: rgba(0, 166, 156, 0.85);
+    /* Teal overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.np-ply-overlay-text {
+    color: #fff;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.np-ply-content-col {
+    flex: 0 0 55%;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* =========================================
+           TYPOGRAPHY & CONTENT
+           ========================================= */
+.np-ply-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--np-ply-text-dark);
+    margin: 0 0 15px 0;
+}
+
+.np-ply-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--np-ply-text-gray);
+    margin: 0 0 30px 0;
+}
+
+/* =========================================
+           FEATURES GRID (2 COLUMNS)
+           ========================================= */
+.np-ply-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+    margin: 0 0 35px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.np-ply-features li {
+    font-size: 14px;
+    color: var(--np-ply-text-gray);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 500;
+}
+
+/* Custom Teal Checkmark (Nice Ply Theme) */
+.np-ply-check-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-color: var(--np-ply-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.np-ply-check-icon svg {
+    width: 12px;
+    height: 12px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* =========================================
+           BUTTONS (NICE PLY THEME)
+           ========================================= */
+.np-ply-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.np-ply-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 30px;
+    /* Rounded pill shape from Nice Ply */
+    transition: var(--np-ply-transition);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.np-ply-btn-primary {
+    background-color: var(--np-ply-primary);
+    color: #ffffff;
+    border: 2px solid var(--np-ply-primary);
+}
+
+.np-ply-btn-primary:hover {
+    background-color: var(--np-ply-primary-hover);
+    border-color: var(--np-ply-primary-hover);
+    color: #ffffff;
+}
+
+.np-ply-btn-secondary {
+    background-color: transparent;
+    color: var(--np-ply-primary);
+    border: 2px solid var(--np-ply-primary);
+}
+
+.np-ply-btn-secondary:hover {
+    background-color: var(--np-ply-primary);
+    color: #ffffff;
+}
+
+/* =========================================
+           RESPONSIVE DESIGN (MOBILES & TABLETS)
+           ========================================= */
+@media (max-width: 992px) {
+    .np-ply-content-col {
+        padding: 40px 30px;
+    }
+
+    .np-ply-features {
+        grid-template-columns: 1fr;
+        /* 1 column on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .np-ply-product-card {
+        flex-direction: column;
+    }
+
+    .np-ply-image-col {
+        min-height: 250px;
+        height: 250px;
+    }
+
+    .np-ply-image-overlay {
+        width: 20%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .np-ply-overlay-text {
+        font-size: 18px;
+    }
+
+    .np-ply-content-col {
+        padding: 30px 20px;
+    }
+
+    .np-ply-title {
+        font-size: 26px;
+    }
+
+    .np-ply-actions {
+        flex-direction: column;
+    }
+
+    .np-ply-btn {
+        width: 100%;
+    }
+}
